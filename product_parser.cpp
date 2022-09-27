@@ -184,7 +184,7 @@ std::string ProductClothingParser::categoryID()
  */
 Product* ProductClothingParser::makeProduct()
 {
-    Produce* myClothing = new Clothing(categoryID(), probName_, price_, qty_, size_, brand_);
+    Product* myClothing = new Clothing(categoryID(), probName_, price_, qty_, size_, brand_);
     return myClothing;
 }
 
