@@ -16,8 +16,9 @@ std::string genre, std::string rating) :
 		keywords_.insert(genre_);
 		keywords_.insert(rating_);
 		std::set<std::string> temp1 = parseStringToWords(name_);
-		for (auto i : temp1) {
-				keywords_.insert(i);
+		std::set<std::string>::iterator it1;
+		for (it1 = temp1.begin(); it1 != temp1.end(); ++it1) {
+				keywords_.insert(*it1);
 		}
 }
 
