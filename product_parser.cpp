@@ -5,6 +5,7 @@
 #include "clothing.h"
 #include "movie.h"
 #include "util.h"
+using namespace std;
 
 
 ProductParser::ProductParser()
@@ -184,11 +185,7 @@ std::string ProductClothingParser::categoryID()
  */
 Product* ProductClothingParser::makeProduct()
 {
-<<<<<<< HEAD
     Product* myClothing = new Clothing(categoryID(), prodName_, price_, qty_, size_, brand_);
-=======
-    Product* myClothing = new Clothing(categoryID(), probName_, price_, qty_, size_, brand_);
->>>>>>> 5fd45a7cf3bba07028db23948588dce9f17a4c19
     return myClothing;
 }
 

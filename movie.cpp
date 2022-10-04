@@ -5,6 +5,7 @@
 #include "util.h"
 #include "movie.h"
 #include "product.h"
+using namespace std;
 
 Movie::Movie(const std::string category, const std::string name, double price, int qty, 
 std::string genre, std::string rating) : 
