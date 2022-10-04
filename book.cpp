@@ -2,6 +2,7 @@
 #include <sstream>
 #include <cctype>
 #include <algorithm>
+#include <map>
 #include "util.h"
 #include "book.h"
 #include "product.h"
@@ -16,15 +17,27 @@ std::string isbn, std::string author) :
 		keywords_.insert(isbn_);
 		std::set<std::string> temp1 = parseStringToWords(name_);
 		std::set<std::string> temp2 = parseStringToWords(author_);
-		for (auto i : temp1) {
-				keywords_.insert(i);
+		std::set<std::string>::iterator it1;
+		std::set<std::string>::iterator it2;
+		for (it1 = temp1.begin(); it1 != temp1.end(); ++it1) {
+				keywords_.insert(*it1);
 		}
-		for (auto i : temp2) {
-				keywords_.insert(i);
+		for (it2 = temp2.begin(); it2 != temp2.end(); ++it2) {
+				keywords_.insert(*it2);
 		}
+		// for (auto i : temp1) {
+		// 		keywords_.insert(i);
+		// }
+		// for (auto i : temp2) {
+		// 		keywords_.insert(i);
+		// }
 }
 
 std::set<std::string> Book::keywords() const{
+		//loop over set and print
+		// for (auto i : keywords_) {
+		// 	cout << i << endl;
+		// }
 		return keywords_;
 }
 
