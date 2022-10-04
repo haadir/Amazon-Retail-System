@@ -5,7 +5,6 @@
 #include "util.h"
 #include "clothing.h"
 #include "product.h"
-using namespace std;
 
 Clothing::Clothing(const std::string category, const std::string name, double price, int qty, 
 std::string size, std::string brand) : 

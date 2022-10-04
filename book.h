@@ -1,7 +1,6 @@
 #ifndef BOOK_H
 #define BOOK_H
 #include "product.h"
-using namespace std;
 
 class Book : public Product {
 public:
