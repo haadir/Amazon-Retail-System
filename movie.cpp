@@ -32,7 +32,7 @@ bool Movie::isMatch(std::vector<std::string>& searchTerms) const{
 
 std::string Movie::displayString() const{
 		//return member data nicely in a string
-		std::string temp = "name: " + name_ + "\nprice: " + std::to_string(price_) + "\nquantity: " + std::to_string(qty_) + "\ngenre: " + 
+		std::string temp = "name: " + name_ + "\nprice: " + (std::to_string(price_).substr(0,5)) + "\nquantity: " + std::to_string(qty_) + "\ngenre: " + 
 		genre_ + "\rating: " + rating_;
 		return temp;
 }

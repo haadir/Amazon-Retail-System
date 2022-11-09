@@ -47,8 +47,7 @@ bool Book::isMatch(std::vector<std::string>& searchTerms) const{
 
 std::string Book::displayString() const{
 		//return member data nicely in a string
-		std::string temp = "name: " + name_ + "\nprice: " + std::to_string(price_) + "\nquantity: " + std::to_string(qty_) + "\nisbn: " + 
-		isbn_ + "\nauthor: " + author_;
+		std::string temp = "name: " + name_ + "\nprice: " + std::to_string(price_) + "\nquantity: " + std::to_string(qty_) + "\nisbn: " + isbn_ + "\nauthor: " + author_;
 		return temp;
 }
 
