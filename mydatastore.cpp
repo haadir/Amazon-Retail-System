@@ -93,12 +93,14 @@ void MyDataStore::dump(std::ostream& ofile) {
 	for(temp = products.begin(); temp != products.end(); temp++) {
 		(*temp)->dump(ofile);
 	}
+	ofile << "</products>" << std::endl;
 	std::map<std::string, User*>::iterator temp1;
 	ofile << "<users>" << std::endl;
 	for(temp1 = users.begin(); temp1 != users.end(); temp1++) {
 		//(*temp1)->dump(ofile);
 		temp1->second->dump(ofile);
 	}
+	ofile << "</users>" << std::endl;
 }
 
 void MyDataStore::addCart(std::string username, Product* p) {
@@ -123,7 +125,7 @@ void MyDataStore::viewCart(string username) {
 	}
 	vector<Product*>::iterator temp;
 	for(temp = cart[username].begin(); temp != cart[username].end(); ++temp) {
-		cout << count << ". " << (*temp)->getName() << endl;
+		cout << "Item " << count << "\n" << (*temp)->getName() << endl;
 		count++;
 	}
 }
